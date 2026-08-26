@@ -1,0 +1,8 @@
+{
+  "name": "NetSage AI",
+  "description": "AI-assisted network troubleshooting dashboard for Cisco Packet Tracer lab scenarios with Human-in-the-Loop approval gate.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

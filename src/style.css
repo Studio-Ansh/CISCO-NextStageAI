@@ -1,0 +1,236 @@
+/* Factory Design System - NetSage AI Terminal War-Room */
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500&display=swap');
+
+:root {
+  --color-obsidian-canvas: #101010;
+  --color-carbon-lift: #1d1a18;
+  --color-ash-stroke: #3d3a39;
+  --color-graphite-mid: #4d4947;
+  --color-warm-granite: #8a8380;
+  --color-pale-stone: #b8b3b0;
+  --color-bone: #eeeeee;
+  --color-chalk: #fafafa;
+  --color-signal-orange: #ee6018;
+  --color-metric-green: #a0ca92;
+}
+
+/* Global App Frame */
+html, body, [data-testid="stAppViewContainer"] {
+  background-color: var(--color-obsidian-canvas) !important;
+  color: var(--color-bone) !important;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-weight: 400 !important;
+  letter-spacing: -0.01em;
+}
+
+[data-testid="stHeader"] {
+  background-color: var(--color-obsidian-canvas) !important;
+  border-bottom: 1px solid var(--color-ash-stroke);
+}
+
+[data-testid="stSidebar"] {
+  background-color: var(--color-carbon-lift) !important;
+  border-right: 1px solid var(--color-ash-stroke) !important;
+}
+
+/* Typography Scale */
+h1 {
+  font-family: 'Geist', sans-serif !important;
+  font-size: 38px !important;
+  font-weight: 500 !important;
+  letter-spacing: -1.1px !important;
+  color: var(--color-bone) !important;
+  margin-bottom: 8px !important;
+}
+
+h2, h3 {
+  font-family: 'Geist', sans-serif !important;
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.5px !important;
+  color: var(--color-bone) !important;
+}
+
+h4, h5 {
+  font-family: 'Geist Mono', monospace !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.02em !important;
+  color: var(--color-pale-stone) !important;
+  margin-top: 16px !important;
+  margin-bottom: 6px !important;
+}
+
+/* Eyebrows and Monospace Labels */
+.eyebrow {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--color-pale-stone);
+}
+
+/* Form Inputs and Dropdowns */
+div[data-baseweb="select"] > div,
+input, textarea {
+  background-color: var(--color-carbon-lift) !important;
+  border: 1px solid var(--color-ash-stroke) !important;
+  color: var(--color-bone) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+  font-family: 'Geist', sans-serif !important;
+}
+
+/* Buttons */
+button[kind="primary"],
+.stButton > button[kind="primary"],
+.btn-primary {
+  background-color: var(--color-chalk) !important;
+  color: #101010 !important;
+  border: none !important;
+  border-radius: 3px !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  letter-spacing: -0.01em !important;
+  box-shadow: none !important;
+  transition: opacity 0.15s ease;
+}
+
+button[kind="primary"]:hover {
+  opacity: 0.9 !important;
+}
+
+button[kind="secondary"],
+.stButton > button,
+.btn-secondary {
+  background-color: var(--color-carbon-lift) !important;
+  color: var(--color-bone) !important;
+  border: 1px solid var(--color-ash-stroke) !important;
+  border-radius: 3px !important;
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  box-shadow: none !important;
+}
+
+/* Signature Light Surface Card (Figure-on-Dark Contrast) */
+.light-surface-card {
+  background-color: var(--color-bone);
+  color: #101010;
+  border-radius: 10px;
+  padding: 24px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.light-surface-card h3 {
+  color: #101010 !important;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.4px !important;
+}
+
+.light-surface-card .eyebrow {
+  color: #4d4947 !important;
+}
+
+.light-surface-card .cli-snippet {
+  background-color: #101010;
+  color: #eeeeee;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  padding: 14px;
+  border-radius: 4px;
+  border: 1px solid #282828;
+  margin-top: 10px;
+}
+
+/* Terminal Show Output Container */
+.telemetry-box {
+  background-color: var(--color-carbon-lift);
+  border: 1px solid var(--color-ash-stroke);
+  border-radius: 3px;
+  padding: 16px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--color-bone);
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Metric Tile (Analytics) */
+.metric-tile {
+  border-top: 1px solid var(--color-carbon-lift);
+  border-bottom: 1px solid var(--color-carbon-lift);
+  padding: 20px 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-tile-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--color-pale-stone);
+  margin-bottom: 6px;
+}
+
+.metric-tile-value {
+  font-family: 'Geist', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  letter-spacing: -1.12px;
+  color: var(--color-bone);
+}
+
+.metric-tile-sparkline {
+  height: 2px;
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 1px;
+}
+
+.sparkline-green {
+  background-color: var(--color-metric-green);
+}
+
+.sparkline-orange {
+  background-color: var(--color-signal-orange);
+}
+
+/* Status Badges with Pulse Dot */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  padding: 3px 8px;
+  background-color: var(--color-carbon-lift);
+  border: 1px solid var(--color-ash-stroke);
+  border-radius: 3px;
+  color: var(--color-bone);
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.pulse-dot-orange {
+  background-color: var(--color-signal-orange);
+}
+
+.pulse-dot-green {
+  background-color: var(--color-metric-green);
+}
+
+.pulse-dot-neutral {
+  background-color: var(--color-warm-granite);
+}

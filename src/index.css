@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-obsidian-canvas: #101010;
+    --color-carbon-lift: #1d1a18;
+    --color-ash-stroke: #3d3a39;
+    --color-graphite-mid: #4d4947;
+    --color-warm-granite: #8a8380;
+    --color-pale-stone: #b8b3b0;
+    --color-bone: #eeeeee;
+    --color-chalk: #fafafa;
+    --color-signal-orange: #ee6018;
+    --color-metric-green: #a0ca92;
+  }
+
+  body {
+    background-color: #101010;
+    color: #eeeeee;
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code, pre, kbd, samp {
+    font-family: 'Geist Mono', monospace;
+  }
+}
+
+/* Monospace Upper Eyebrow / Label */
+.eyebrow {
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: #b8b3b0;
+}
+
+/* Hairline border utility */
+.border-ash {
+  border-color: #3d3a39;
+}
+
+/* Raised surface utility */
+.bg-carbon {
+  background-color: #1d1a18;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #101010;
+}
+::-webkit-scrollbar-thumb {
+  background: #3d3a39;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4947;
+}

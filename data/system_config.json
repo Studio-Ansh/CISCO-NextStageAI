@@ -1,0 +1,8 @@
+{
+  "model_provider": "google_genai",
+  "model_name": "gemini-3.7-flash",
+  "confidence_threshold": 0.80,
+  "max_retries": 3,
+  "cases_path": "data/cases.csv",
+  "audit_log_path": "docs/model_audit_log.md"
+}
